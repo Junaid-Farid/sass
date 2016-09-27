@@ -54,8 +54,8 @@ module.exports = function (grunt) {
                     spawn: false,
                     nospawn: true
                 },
-                files: ['*.html', './**/**/*.scss', './**/**/*.css']
-            },
+                files: ['*.html', './**/**/*.scss', './**/**/*.css', './**/**/*.js']
+            }, 
             scripts: {
                 files: 'assets/common/js/application.js',
                 tasks: 'uglify'
@@ -74,5 +74,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-livereload');
 
-    grunt.registerTask('default', ['connect', 'sass', 'cssmin', 'uglify', 'watch']);
+    grunt.registerTask('default', ['connect',  'watch']);
 };
